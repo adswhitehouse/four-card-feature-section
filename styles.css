@@ -230,3 +230,70 @@ body {
 .card-4::after {
   background: var(--blue);
 }
+
+/* Media Queries */
+@media screen and (max-width: 53rem) {
+  /* Body */
+  body {
+    padding: 5rem 5vw 5vw;
+  }
+
+  /* Cards */
+  .cards {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    align-items: stretch;
+  }
+
+  .middle-cards {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-1,
+  .card-4 {
+    height: unset;
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  /* Utility Classes */
+  .tp-1 {
+    font-size: 1.5rem;
+  }
+
+  .tp-2 {
+    font-size: 1.5rem;
+  }
+
+  .tp-4 {
+    font-size: 0.938rem;
+  }
+
+  /* Body */
+  body {
+    padding-top: 3.5rem;
+  }
+
+  /* Heading */
+  .heading {
+    margin-bottom: 3.75rem;
+  }
+
+  /* Cards */
+  .cards {
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .middle-cards {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card-1,
+  .card-4 {
+    width: 100%;
+  }
+}
